@@ -1,0 +1,16 @@
+struct ExampleView: View {
+    var body: some View {
+        VStack {
+            Spacer()
+            Text("Hello World !!!")
+                .anchorPreference(
+                    key: BoundsPreferenceKey.self,
+                    value: .bounds
+                ) { $0 }
+        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//            self.passThroughPublisher2.send(1)
+//        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+//            self.passThroughPublisher2.send(2)
+//        }
